@@ -48,13 +48,13 @@ function fizzOrBuzz() {
         } else if (i % 3 == 0) {
             let newDiv = document.createElement('div');
             newDiv.classList.add('cell', 'm-3')
-            newDiv.innerHTML = `Fizz`;
+            newDiv.innerHTML = "<img src=\"img/Fizz_0.jpg\" width=\"200px\" height=\"200px\">";
             cells.append(newDiv);
             console.log(`Fizz`);
         } else if (i % 5 == 0) {
             let newDiv = document.createElement('div');
             newDiv.classList.add('cell', 'm-3')
-            newDiv.innerHTML = `Buzz`;
+            newDiv.innerHTML ="<img src=\"img/Utilitybeltbuzztoystory2.JPG.webp\" width=\"200px\" height=\"200px\">";
             cells.append(newDiv);
             console.log(`Buzz`);
         } else {
