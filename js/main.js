@@ -1,26 +1,73 @@
-/* Scrivi un programma che stampi i numeri da 1 a 100, ma per i multipli di 3 stampi “Fizz” al posto del numero e per i multipli di 5 stampi Buzz.
-Per i numeri che sono sia multipli di 3 che di 5 stampi FizzBuzz.
-Prima di partire a scrivere codice poniamoci qualche domanda:
-Come faccio a sapere se un numero è divisibile per? Abbiamo visto qualcosa di particolare che possiamo usare?
-Consigli del giorno:
-Scriviamo sempre prima dei commenti in italiano per capire cosa vogliamo fare
-Proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
-Se ci serve, disegnamo un piccolo schemino! */
 
-//stamapare i numeri d a1 a 100
 
+
+// inizializzo la variabile cell 
+const cells = document.getElementById('for-cells');
+
+// ciclo for per 100 volte
+
+/* 
 for (let i = 1; i <= 100; i++) {
     if (i % 3 == 0 && i % 5 ==0) {
-        console.log(`FizzBuzz`);
         let newDiv = document.createElement('div');
-        newDiv.innerHTML = i;
-        
+        newDiv.classList.add('cell', 'm-3')
+        newDiv.innerHTML = `FizzBuzz`;
+        cells.append(newDiv);
+        console.log(`FizzBuzz`);
+
     } else if (i % 3 == 0) {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('cell', 'm-3')
+        newDiv.innerHTML = `Fizz`;
+        cells.append(newDiv);
         console.log(`Fizz`);
     } else if (i % 5 == 0) {
         console.log(`Buzz`);
-    } 
-    console.log(i);
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('cell', 'm-3')
+        newDiv.innerHTML = `Buzz`;
+        cells.append(newDiv);
+    } else {
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('cell', 'm-3')
+        newDiv.innerHTML = i;
+        cells.append(newDiv);
+    }
+} */
+
+function fizzOrBuzz() {
+
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 == 0 && i % 5 ==0) {
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('cell', 'm-3')
+            newDiv.innerHTML = `FizzBuzz`;
+            cells.append(newDiv);
+            console.log(`FizzBuzz`);
+    
+        } else if (i % 3 == 0) {
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('cell', 'm-3')
+            newDiv.innerHTML = `Fizz`;
+            cells.append(newDiv);
+            console.log(`Fizz`);
+        } else if (i % 5 == 0) {
+            console.log(`Buzz`);
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('cell', 'm-3')
+            newDiv.innerHTML = `Buzz`;
+            cells.append(newDiv);
+        } else {
+            let newDiv = document.createElement('div');
+            newDiv.classList.add('cell', 'm-3')
+            newDiv.innerHTML = i;
+            cells.append(newDiv);
+        }
+    }
 }
+
+document.querySelector('button').addEventListener(`click`, fizzOrBuzz);
+
+
 
 
