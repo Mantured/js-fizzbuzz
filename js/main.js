@@ -10,5 +10,17 @@ Se ci serve, disegnamo un piccolo schemino! */
 //stamapare i numeri d a1 a 100
 
 for (let i = 1; i <= 100; i++) {
-    console.log(i)
+    if (i % 3 == 0 && i % 5 ==0) {
+        console.log(`FizzBuzz`);
+        let newDiv = document.createElement('div');
+        newDiv.innerHTML = i;
+        
+    } else if (i % 3 == 0) {
+        console.log(`Fizz`);
+    } else if (i % 5 == 0) {
+        console.log(`Buzz`);
+    } 
+    console.log(i);
 }
+
+
