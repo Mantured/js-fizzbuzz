@@ -15,3 +15,7 @@ div.cell {
   line-height: 250px;
   border-radius: 1rem;
 }
+
+#box {
+  background-color: chocolate;
+}
